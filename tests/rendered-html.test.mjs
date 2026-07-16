@@ -23,8 +23,8 @@ async function render(pathname = "/") {
   );
 }
 
-test("renders the sales page with the live Hotmart checkout", async () => {
-  const response = await render("/");
+test("renders the sales page at its production path with the live Hotmart checkout", async () => {
+  const response = await render("/mns/main");
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
@@ -39,8 +39,8 @@ test("renders the sales page with the live Hotmart checkout", async () => {
 
 test("renders the upsell and downsell as distinct offers", async () => {
   const [upsellResponse, downsellResponse] = await Promise.all([
-    render("/upsell"),
-    render("/downsell"),
+    render("/mns/up"),
+    render("/mns/down"),
   ]);
 
   assert.equal(upsellResponse.status, 200);
