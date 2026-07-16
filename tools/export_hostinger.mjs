@@ -1,4 +1,4 @@
-import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -30,6 +30,23 @@ function makeStatic(html) {
 
 await rm(outputRoot, { recursive: true, force: true });
 await cp(resolve(projectRoot, "dist/client"), outputRoot, { recursive: true });
+
+const assetDirectory = resolve(outputRoot, "assets");
+for (const asset of await readdir(assetDirectory)) {
+  const assetPath = resolve(assetDirectory, asset);
+  if (asset.endsWith(".css")) {
+    const css = await readFile(assetPath, "utf8");
+    await writeFile(
+      assetPath,
+      css
+        .replaceAll('url("/images/', 'url("/mns/images/')
+        .replaceAll("url(/images/", "url(/mns/images/"),
+      "utf8",
+    );
+  } else if (asset.endsWith(".js")) {
+    await rm(assetPath);
+  }
+}
 
 for (const [route, output] of pages) {
   const response = await worker.fetch(
