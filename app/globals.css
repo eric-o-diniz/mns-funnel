@@ -947,3 +947,795 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Professional nutritionist funnel */
+.nutri-funnel {
+  --nutri-ink: #18343c;
+  --nutri-deep: #102a31;
+  --nutri-green: #146b5b;
+  --nutri-coral: #e45f46;
+  --nutri-yellow: #f4c84a;
+  --nutri-blue: #dcecf2;
+  --nutri-paper: #f8faf7;
+  --nutri-line: #b7cbc8;
+  background: var(--nutri-paper);
+  color: var(--nutri-ink);
+}
+
+.nutri-funnel h1,
+.nutri-funnel h2,
+.nutri-funnel h3 {
+  color: var(--nutri-ink);
+}
+
+.nutri-funnel h1 {
+  max-width: 860px;
+  font-size: 62px;
+}
+
+.nutri-funnel h2 {
+  max-width: 880px;
+  font-size: 42px;
+}
+
+.nutri-funnel p {
+  color: #4b6268;
+}
+
+.nutri-notice {
+  min-height: 44px;
+  padding: 11px 24px;
+  background: var(--nutri-deep);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nutri-notice-success {
+  background: var(--nutri-green);
+}
+
+.nutri-hero {
+  position: relative;
+  display: flex;
+  min-height: min(760px, calc(100svh - 44px));
+  align-items: center;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nutri-hero-main {
+  background-image: url("/images/trilha-sensorial.png");
+  background-position: center 34%;
+}
+
+.nutri-hero-kit {
+  background-image: url("/images/como-jogar.jpg");
+  background-position: center 18%;
+}
+
+.nutri-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(248, 250, 247, 0.98) 0%, rgba(248, 250, 247, 0.94) 52%, rgba(248, 250, 247, 0.62) 100%);
+}
+
+.nutri-hero-content {
+  z-index: 1;
+  padding-block: 64px 72px;
+}
+
+.nutri-brand {
+  margin-bottom: 64px;
+  color: var(--nutri-ink) !important;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.nutri-kicker {
+  margin-bottom: 12px;
+  color: var(--nutri-green) !important;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nutri-kicker-light {
+  color: var(--nutri-yellow) !important;
+}
+
+.nutri-lead {
+  max-width: 760px;
+  margin-bottom: 16px;
+  color: var(--nutri-ink) !important;
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.nutri-proof {
+  max-width: 700px;
+  margin-bottom: 28px;
+  color: var(--nutri-green) !important;
+  font-weight: 700;
+}
+
+.nutri-button {
+  background: var(--nutri-coral);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(164, 56, 35, 0.24);
+}
+
+.nutri-button:hover {
+  background: #c94b34;
+}
+
+.nutri-microcopy {
+  margin: 12px 0 0;
+  color: #5b6d70 !important;
+  font-size: 12px;
+}
+
+.nutri-section {
+  padding-block: 92px;
+}
+
+.nutri-section-dark {
+  background: var(--nutri-deep);
+}
+
+.nutri-section-dark h2,
+.nutri-section-dark h3,
+.nutri-section-dark p {
+  color: #fff;
+}
+
+.nutri-section-dark p:not(.nutri-kicker) {
+  color: #c2d5d7;
+}
+
+.nutri-intro-grid,
+.nutri-recognition-layout,
+.nutri-value-layout,
+.nutri-use-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 76px;
+  align-items: start;
+}
+
+.nutri-large-copy {
+  color: var(--nutri-ink) !important;
+  font-size: 22px;
+  line-height: 1.46;
+}
+
+.nutri-section-dark .nutri-large-copy {
+  color: #fff !important;
+}
+
+.nutri-heading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+
+.nutri-heading-row > p {
+  margin-bottom: 20px;
+}
+
+.nutri-return-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--nutri-line);
+  border-bottom: 1px solid var(--nutri-line);
+}
+
+.nutri-return-grid article {
+  min-height: 235px;
+  padding: 30px 28px;
+  border-right: 1px solid var(--nutri-line);
+}
+
+.nutri-return-grid article:last-child {
+  border-right: 0;
+}
+
+.nutri-return-grid span {
+  display: block;
+  margin-bottom: 40px;
+  color: var(--nutri-coral);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.nutri-return-grid p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.nutri-return-grid-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nutri-disclaimer {
+  max-width: 850px;
+  margin: 26px 0 0;
+  font-size: 12px;
+}
+
+.nutri-product-band {
+  background: var(--nutri-blue);
+}
+
+.nutri-product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1.2fr);
+  gap: 68px;
+  align-items: center;
+}
+
+.nutri-board-preview {
+  margin: 0;
+}
+
+.nutri-board-preview img {
+  width: 100%;
+  border: 10px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 22px 52px rgba(16, 42, 49, 0.18);
+}
+
+.nutri-board-preview figcaption {
+  margin-top: 12px;
+  color: #3d565c;
+  font-size: 12px;
+}
+
+.nutri-check-list {
+  display: grid;
+  gap: 0;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nutri-check-list li {
+  position: relative;
+  padding: 12px 0 12px 28px;
+  border-bottom: 1px solid var(--nutri-line);
+}
+
+.nutri-check-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--nutri-green);
+  content: "✓";
+  font-weight: 700;
+}
+
+.nutri-check-list-large li {
+  padding-block: 14px;
+}
+
+.nutri-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 44px;
+  border: 1px solid var(--nutri-line);
+}
+
+.nutri-flow article {
+  min-height: 260px;
+  padding: 30px 24px;
+  background: #fff;
+  border-right: 1px solid var(--nutri-line);
+}
+
+.nutri-flow article:last-child {
+  border-right: 0;
+}
+
+.nutri-flow strong {
+  display: block;
+  margin-bottom: 52px;
+  color: var(--nutri-coral);
+  font-size: 13px;
+}
+
+.nutri-flow p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.nutri-recognition-band {
+  background: var(--nutri-green);
+}
+
+.nutri-recognition-band h2,
+.nutri-recognition-band h3,
+.nutri-recognition-band p,
+.nutri-recognition-band blockquote {
+  color: #fff;
+}
+
+.nutri-recognition-band blockquote {
+  margin-bottom: 24px;
+  border-color: var(--nutri-yellow);
+  font-size: 24px;
+}
+
+.nutri-recognition-band p:not(.nutri-kicker) {
+  color: #d5e7e3;
+}
+
+.nutri-included-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 70px;
+  align-items: start;
+}
+
+.nutri-bump-preview {
+  padding: 30px;
+  border: 2px solid var(--nutri-ink);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 12px 12px 0 var(--nutri-yellow);
+}
+
+.nutri-bump-label {
+  margin-bottom: 10px;
+  color: var(--nutri-coral) !important;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nutri-bump-preview ul {
+  margin: 20px 0;
+  padding-left: 20px;
+  color: #4b6268;
+  font-size: 14px;
+}
+
+.nutri-bump-preview strong {
+  color: var(--nutri-green);
+}
+
+.nutri-offer {
+  padding-block: 92px;
+  background: #fff;
+}
+
+.nutri-offer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 72px;
+  align-items: center;
+}
+
+.nutri-price-panel {
+  padding: 34px;
+  border: 2px solid var(--nutri-ink);
+  border-radius: 6px;
+  background: var(--nutri-paper);
+  text-align: center;
+  box-shadow: 14px 14px 0 var(--nutri-blue);
+}
+
+.nutri-price-panel > p:first-child {
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nutri-price {
+  margin-bottom: 24px;
+  color: var(--nutri-ink);
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.nutri-price small {
+  margin-right: 6px;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+.nutri-price-panel .button {
+  width: 100%;
+}
+
+.nutri-decline {
+  display: inline-block;
+  margin-top: 18px;
+  color: #5b6d70;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.nutri-faq {
+  background: #eaf2ee;
+}
+
+.nutri-faq-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 76px;
+  align-items: start;
+}
+
+.nutri-faq-list {
+  border-top: 1px solid var(--nutri-line);
+}
+
+.nutri-final-cta {
+  padding-block: 100px;
+  background: var(--nutri-deep);
+  text-align: center;
+}
+
+.nutri-final-cta h2 {
+  margin-inline: auto;
+  color: #fff;
+  font-size: 48px;
+}
+
+.nutri-footer {
+  background: #091f25;
+}
+
+.nutri-library-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--nutri-line);
+}
+
+.nutri-library-grid article {
+  min-height: 220px;
+  padding: 30px;
+  background: #fff;
+  border-right: 1px solid var(--nutri-line);
+  border-bottom: 1px solid var(--nutri-line);
+}
+
+.nutri-library-grid article:nth-child(2n) {
+  border-right: 0;
+}
+
+.nutri-library-grid article:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.nutri-library-grid strong {
+  display: block;
+  margin-bottom: 34px;
+  color: var(--nutri-coral);
+  font-size: 13px;
+}
+
+.nutri-library-grid p {
+  margin-bottom: 0;
+}
+
+.nutri-value-band {
+  background: var(--nutri-yellow);
+}
+
+.nutri-value-band p {
+  color: #30464b;
+}
+
+.nutri-value-layout {
+  align-items: center;
+}
+
+.nutri-metric {
+  display: grid;
+  min-height: 260px;
+  place-content: center;
+  border: 2px solid var(--nutri-ink);
+  background: #fff;
+  text-align: center;
+}
+
+.nutri-metric span {
+  color: var(--nutri-coral);
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.nutri-metric p {
+  max-width: 230px;
+  margin: 10px auto 0;
+  font-weight: 700;
+}
+
+.nutri-recognition-note {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  margin-top: 42px;
+  padding: 32px;
+  border-left: 6px solid var(--nutri-coral);
+  background: var(--nutri-blue);
+}
+
+.nutri-recognition-note strong {
+  color: var(--nutri-ink);
+  font-size: 20px;
+}
+
+.nutri-recognition-note p {
+  margin-bottom: 0;
+}
+
+.nutri-use-band {
+  background: #dcebe3;
+}
+
+.nutri-use-layout ol {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 1px;
+  background: var(--nutri-line);
+  list-style: none;
+}
+
+.nutri-use-layout li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 20px;
+  background: #fff;
+}
+
+.nutri-use-layout li span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--nutri-coral);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.nutri-use-layout li p {
+  margin: 0;
+}
+
+.nutri-downsell-hero {
+  position: relative;
+  display: flex;
+  min-height: min(700px, calc(100svh - 44px));
+  align-items: center;
+  overflow: hidden;
+  background-image: url("/images/como-jogar.jpg");
+  background-position: center 18%;
+  background-size: cover;
+}
+
+.nutri-downsell-hero::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(248, 250, 247, 0.98) 0%, rgba(248, 250, 247, 0.94) 58%, rgba(248, 250, 247, 0.66) 100%);
+  content: "";
+}
+
+.nutri-downsell-layout {
+  position: relative;
+  z-index: 1;
+  padding-block: 64px;
+}
+
+.nutri-downsell-layout > div {
+  max-width: 850px;
+}
+
+.nutri-comparison {
+  margin-top: 38px;
+  border: 1px solid var(--nutri-line);
+  overflow: hidden;
+}
+
+.nutri-comparison-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.75fr 0.75fr;
+  min-height: 70px;
+  align-items: center;
+  border-bottom: 1px solid var(--nutri-line);
+}
+
+.nutri-comparison-row:last-child {
+  border-bottom: 0;
+}
+
+.nutri-comparison-row > * {
+  padding: 15px 18px;
+}
+
+.nutri-comparison-row > * + * {
+  border-left: 1px solid var(--nutri-line);
+}
+
+.nutri-comparison-head {
+  background: var(--nutri-deep);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nutri-comparison-row strong {
+  color: var(--nutri-green);
+}
+
+@media (max-width: 900px) {
+  .nutri-funnel h1 {
+    font-size: 50px;
+  }
+
+  .nutri-funnel h2,
+  .nutri-final-cta h2 {
+    font-size: 36px;
+  }
+
+  .nutri-intro-grid,
+  .nutri-heading-row,
+  .nutri-product-layout,
+  .nutri-recognition-layout,
+  .nutri-included-layout,
+  .nutri-offer-layout,
+  .nutri-faq-layout,
+  .nutri-value-layout,
+  .nutri-use-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .nutri-return-grid,
+  .nutri-return-grid-four,
+  .nutri-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nutri-return-grid article:nth-child(2),
+  .nutri-flow article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .nutri-return-grid article,
+  .nutri-flow article {
+    border-bottom: 1px solid var(--nutri-line);
+  }
+
+  .nutri-return-grid article:nth-last-child(-n + 2),
+  .nutri-flow article:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .nutri-price-panel {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 620px) {
+  .nutri-notice {
+    padding-inline: 14px;
+    font-size: 10px;
+  }
+
+  .nutri-hero,
+  .nutri-downsell-hero {
+    min-height: min(700px, calc(100svh - 44px));
+  }
+
+  .nutri-hero-overlay,
+  .nutri-downsell-hero::before {
+    background: rgba(248, 250, 247, 0.92);
+  }
+
+  .nutri-hero-content,
+  .nutri-downsell-layout {
+    padding-block: 42px;
+  }
+
+  .nutri-brand {
+    margin-bottom: 36px;
+  }
+
+  .nutri-funnel h1 {
+    font-size: 39px;
+  }
+
+  .nutri-funnel h2,
+  .nutri-final-cta h2 {
+    font-size: 31px;
+  }
+
+  .nutri-lead,
+  .nutri-large-copy {
+    font-size: 19px;
+  }
+
+  .nutri-section,
+  .nutri-offer {
+    padding-block: 66px;
+  }
+
+  .nutri-return-grid,
+  .nutri-return-grid-four,
+  .nutri-flow,
+  .nutri-library-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nutri-return-grid article,
+  .nutri-return-grid article:nth-child(2),
+  .nutri-flow article,
+  .nutri-flow article:nth-child(2),
+  .nutri-library-grid article,
+  .nutri-library-grid article:nth-child(2n) {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--nutri-line);
+  }
+
+  .nutri-return-grid article:last-child,
+  .nutri-flow article:last-child,
+  .nutri-library-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  .nutri-return-grid span,
+  .nutri-flow strong,
+  .nutri-library-grid strong {
+    margin-bottom: 22px;
+  }
+
+  .nutri-board-preview img {
+    border-width: 5px;
+  }
+
+  .nutri-bump-preview,
+  .nutri-price-panel {
+    padding: 26px 20px;
+    box-shadow: 7px 7px 0 var(--nutri-yellow);
+  }
+
+  .nutri-price-panel {
+    box-shadow: 7px 7px 0 var(--nutri-blue);
+  }
+
+  .nutri-price {
+    font-size: 62px;
+  }
+
+  .nutri-recognition-note {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px 20px;
+  }
+
+  .nutri-comparison {
+    overflow-x: auto;
+  }
+
+  .nutri-comparison-row {
+    min-width: 650px;
+  }
+}

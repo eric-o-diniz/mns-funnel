@@ -143,7 +143,7 @@ export default function UpsellPage() {
               <span>Sim, quero o kit completo</span>
               <span aria-hidden="true">→</span>
             </a>
-            <a className="decline-link" href="/downsell">Não, quero continuar sem esta oferta</a>
+            <a className="decline-link" href="/mns/down">Não, quero continuar sem esta oferta</a>
           </div>
         </div>
       </section>

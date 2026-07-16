@@ -40,3 +40,7 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# generated Hostinger bundles
+/hostinger/
+/mns-hostinger*.zip

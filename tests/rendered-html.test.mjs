@@ -23,8 +23,8 @@ async function render(pathname = "/") {
   );
 }
 
-test("renders the sales page with the live Hotmart checkout", async () => {
-  const response = await render("/");
+test("renders the sales page at its production path with the live Hotmart checkout", async () => {
+  const response = await render("/mns/main");
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
@@ -39,8 +39,8 @@ test("renders the sales page with the live Hotmart checkout", async () => {
 
 test("renders the upsell and downsell as distinct offers", async () => {
   const [upsellResponse, downsellResponse] = await Promise.all([
-    render("/upsell"),
-    render("/downsell"),
+    render("/mns/up"),
+    render("/mns/down"),
   ]);
 
   assert.equal(upsellResponse.status, 200);
@@ -55,9 +55,43 @@ test("renders the upsell and downsell as distinct offers", async () => {
   assert.match(upsell, /Plano Mesa Curiosa - 4 Semanas/);
   assert.match(upsell, /Acordo da Família à Mesa/);
   assert.match(upsell, /R\$67/);
+  assert.match(upsell, /href="\/mns\/down"/);
 
   assert.match(downsell, /versão essencial/i);
   assert.match(downsell, /R\$47/);
+  assert.match(downsell, /Não incluído/);
+});
+
+test("renders the professional nutritionist funnel as three clear offers", async () => {
+  const [mainResponse, upsellResponse, downsellResponse] = await Promise.all([
+    render("/mns/nutri"),
+    render("/mns/nutri/up"),
+    render("/mns/nutri/down"),
+  ]);
+
+  assert.equal(mainResponse.status, 200);
+  assert.equal(upsellResponse.status, 200);
+  assert.equal(downsellResponse.status, 200);
+
+  const [main, upsell, downsell] = await Promise.all([
+    mainResponse.text(),
+    upsellResponse.text(),
+    downsellResponse.text(),
+  ]);
+
+  assert.match(main, /Uma atividade que transforma orientação em experiência/);
+  assert.match(main, /Reconhecimento/);
+  assert.match(main, /Roteiro de Aplicação para Nutris/);
+  assert.match(main, /pay\.hotmart\.com\/W106307307V/);
+  assert.match(main, /R\$27/);
+
+  assert.match(upsell, /62 materiais prontos/);
+  assert.match(upsell, /Tempo, continuidade, indicação e reconhecimento/);
+  assert.match(upsell, /R\$247/);
+  assert.match(upsell, /href="\/mns\/nutri\/down"/);
+
+  assert.match(downsell, /36 atividades/);
+  assert.match(downsell, /R\$147/);
   assert.match(downsell, /Não incluído/);
 });
 
